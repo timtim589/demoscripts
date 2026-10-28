@@ -125,21 +125,75 @@ class Kuberator:
     def discover_cross_namespace_roles(self):
         namespaces = (
             "foo",
+
+            # Development
             "dev",
+            "devel",
+            "develop",
             "development",
+            "dev1",
+            "dev2",
+            "dev3",
+
+            # Test
             "test",
+            "tests",
             "testing",
+            "test1",
+            "test2",
+            "qa",
+            "qat",
+
+            # Acceptance / UAT
             "acc",
             "accept",
             "acceptance",
-            "euat",
             "uat",
+            "euat",
+            "sit",      # System Integration Testing
+            "fit",      # Functional Integration Testing
+            "stage",
+            "staging",
+            "preprod",
+            "pre-prod",
+            "preproduction",
+            "preview",
+            "sandbox",
+
+            # Production
             "prd",
             "prod",
             "production",
-            "ingress",
-        )
+            "live",
+            "main",
 
+            # Shared infrastructure
+            "default",
+            "kube-system",
+            "kube-public",
+            "kube-node-lease",
+            "ingress",
+            "ingress-nginx",
+            "nginx-ingress",
+            "monitoring",
+            "logging",
+            "observability",
+            "metrics",
+            "security",
+            "istio-system",
+            "linkerd",
+            "cert-manager",
+            "external-dns",
+            "argocd",
+            "argo",
+            "flux-system",
+            "tekton-pipelines",
+            "velero",
+            "vault",
+            "gatekeeper-system",
+            "longhorn-system",
+            "rook-ceph",
+        )
         baseline = None
         baseline_ns = None
 
